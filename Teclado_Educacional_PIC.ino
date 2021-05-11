@@ -55,9 +55,9 @@ void setup() {
 void loop() {
   
   //Chamada da função do modo aprendizado
-   musica();
+  //musica();
   //Chamada da função do modo freestyle
-   //freeStyle(tones);
+   freeStyle(tones[3]);
 }
 
 void freeStyle(int tom[]){
