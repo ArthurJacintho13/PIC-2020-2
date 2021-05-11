@@ -2,6 +2,7 @@
 #include "notas.h"
 #include "Musicas.h"
 
+//i: indice da tecla a ser pressionada (0 a n(n = numero total de teclas a serem pressionadas ao final da musica))
 int i=0;
 
 //Função para o modo freestyle
@@ -77,36 +78,9 @@ void freeStyle(int tom[]){
     }
   }
 }
+
 void musica(){
-  int lastState = LOW;                   //lastState: variável com o mesmo uso da função anterior. i: indice da tecla a ser pressionada (0 a n(n = numero total de teclas a serem pressionadas ao final da musica))
-  while(digitalRead(keys_musica[i])){    //loop que mantém a emissão de som de uma determinada tecla enquanto essa estiver pressionada
-       tone(SPK, musicas[i]);            //inicio da reprodução do som da tecla
-       digitalWrite(leds_musica[i], LOW); //desativação do sinal luminoso (led) da tecla a ser pressionada (nessa momento a tecla já foi/está pressionada)
-       delay(200);                       //delay de segurança
-       lastState=HIGH;                   //HIGH: indica que alguma tecla (mais especificamente: a de indice i no vetor leds) foi pressionada.
-     }
-     if(lastState==HIGH){                //inicio de desativação do sinal luminoso (led) previamente acesso(nesse momento led está acesso)
-       lastState=LOW;                    //LOW:indica que nenhuma tecla foi/está sendo pressionada ainda.
-       noTone(SPK);                      //fim da reprodução do som da tecla
-       digitalWrite(leds_musica[i+1], HIGH); //ativação do sinal luminoso (led) da proxima tecla a ser pressionada
-       i++;                              //incremento da tecla a ser pressionada
-     }
-     if (i > (sizeof(ordem)/sizeof(int))-1){ //condicional de controle para reiniciar o modo aprendizado da musica em questão
-       i = 0;                                //retornando ao indice da primeira tecla a ser pressionada
-       noTone(SPK);                          //fim da reprodução do som da tecla anterior
-       delay(500);
-       for(int p = 0; p < 12; p++){          //loop responsável pelo pequeno show de luzes ao finalizar a musica
-        digitalWrite(leds[p], HIGH);         //funcionamento: o loop acende e apaga em ordem crescente os leds presentes.
-        delay(200);
-        digitalWrite(leds[p], LOW);
-        delay(100);
-       }
-       digitalWrite(leds_musica[0], HIGH);   //Ligando o led da primeira tecla a ser tocada (modo aprendizado)
-     }
-}
-/*
-void musica(){
-  int lastState = LOW, i=0;             //lastState: variável com o mesmo uso da função anterior. i: indice da tecla a ser pressionada (0 a n(n = numero total de teclas a serem pressionadas ao final da musica))
+  int lastState = LOW;                  //lastState: variável com o mesmo uso da função anterior.
   while(digitalRead(keys_musica[i])){   //loop que mantém a emissão de som de uma determinada tecla enquanto essa estiver pressionada
        tone(SPK, musicas[i]);           //inicio da reprodução do som da tecla
        digitalWrite(leds_musica[i], LOW); //desativação do sinal luminoso (led) da tecla a ser pressionada (nessa momento a tecla já foi/está pressionada)
@@ -132,4 +106,3 @@ void musica(){
        digitalWrite(leds_musica[0], HIGH); //Ligando o led da primeira tecla a ser tocada (modo aprendizado)
   }
 }
-*/
