@@ -2,9 +2,13 @@
 #include "notas.h"
 #include "Musicas.h"
 
+//Função para o modo freestyle
 void freeStyle(int tom[]);
+
+//Função para o modo aprendizado
 void musica();
 
+//
 int i = 0;
 int keys[] = {14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 int leds[] = {38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49};
