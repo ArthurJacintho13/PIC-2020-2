@@ -2,15 +2,13 @@
 #include "notas.h"
 #include "Musicas.h"
 
-//i: indice da tecla a ser pressionada (0 a n(n = numero total de teclas a serem pressionadas ao final da musica))
-int i=0;
-
 //Função para o modo freestyle
 /*tom[]: oitava desejada para o freestyle*/
 void freeStyle(int tom[]);
+//Variavel contadora global
+int i = 0;
 //Função para o modo aprendizado
 void musica();
-
 // Vetor com o valor das portas do arduino referentes as teclas de C(Dó) a B(Si)
 int keys[] = {14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 // Vetor com o valor das portas do arduino referentes aos leds de C(Dó) a B(Si)
@@ -49,17 +47,19 @@ void setup() {
     pinMode(keys[i], INPUT);
     pinMode(leds[i], OUTPUT);
   }
-  
+
   //Ligando o led da primeira tecla a ser tocada (modo aprendizado)
-  digitalWrite(leds_musica[0], HIGH);
+  //Caso queria usar o teclado no modo freeStyle, comente a linha abaixo
+  //digitalWrite(leds_musica[0], HIGH);
   
 }
 
 void loop() {
+  
   //Chamada da função do modo aprendizado
-    musica();
+  //musica();
   //Chamada da função do modo freestyle
-  //freeStyle(tones[3]);
+  freeStyle(tones[3]);
 }
 
 void freeStyle(int tom[]){
@@ -78,9 +78,8 @@ void freeStyle(int tom[]){
     }
   }
 }
-
 void musica(){
-  int lastState = LOW;                  //lastState: variável com o mesmo uso da função anterior.
+  int lastState = LOW;            //lastState: variável com o mesmo uso da função anterior. i: indice da tecla a ser pressionada (0 a n(n = numero total de teclas a serem pressionadas ao final da musica))
   while(digitalRead(keys_musica[i])){   //loop que mantém a emissão de som de uma determinada tecla enquanto essa estiver pressionada
        tone(SPK, musicas[i]);           //inicio da reprodução do som da tecla
        digitalWrite(leds_musica[i], LOW); //desativação do sinal luminoso (led) da tecla a ser pressionada (nessa momento a tecla já foi/está pressionada)
