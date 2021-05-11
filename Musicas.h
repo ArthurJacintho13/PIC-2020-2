@@ -52,6 +52,10 @@ Ao final, basta descomentar os dois vetores relacionados a sua musica, comentar 
 //int ordem[] = {A, C, A, C, A, C, A, B, G, E, C, E, E, G, G, F_, D, F_, D, F_, D, D, F_, F_, E, D, E, C, B, B, A, C, A, A, C, A, B, G, A, E, E, E, G, G, F_, D, F_, D, F_, D, D, F_, F_, E, D, E, C, B, B, A, C, A, A, C, A, B, G, E, C};
 //int tom[] ={3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 4, 3, 3, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 4, 3, 3, 4, 3, 3, 3, 4, 3};
 
+//mARIO
+//int ordem[] = {E, E, E, C, E, G, G, C, G, E, A, B, A_S, A, G, E, G, A, F, G, E, C, D, B}
+//int tom[] =   {5, 5, 5, 5, 5, 5, 4, 5, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 4}
+
 //Desperte o músico em vc e escreva uma nova música! :)
 //int ordem[] = {};
 //int tom[] = {};
