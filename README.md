@@ -2,7 +2,7 @@
 Trabalho final de Projeto Integrado de Computação - Engenharia de computação - Ufes
 
 # RESUMO
-Construção de um teclado simples com 12 teclas, 7 notas e 5 acidentes, com o objetivo de familiarizar qualquer um com a dinâmica básica de um teclado real e de ensinar a tocar algumas músicas nesse instrumento.
+Construção de um teclado simples com 12 teclas, 7 notas e 5 acidentes (sustenidos), com o objetivo de familiarizar qualquer um com a dinâmica básica de um teclado real e de ensinar a tocar algumas músicas nesse instrumento.
 
 # DESCRIÇÃO:
 A realização do projeto inclui a construção de um circuito elétrico simples em uma protoboard, onde estão as teclas do teclado e os leds (um por tecla).
@@ -10,6 +10,8 @@ O projeto conta com dois modos: freestyle e aprendizado. O modo freestyle consis
 
 # ESQUEMÁTICO:
 https://imgur.com/see8qT8
+
+Obs: o esquemático passado pode ter seu visual melhorado e polido para que parece mais com um teclado real. Isso pode ser feito colocando as teclas dos sustenidos um pouco acima do nível das teclas das notas, assim como em um teclado real.
 
 # CODIGO
 O código na versão presente permite ainda a implementação de um dispositivo sonoro que melhore a qualidade do som gerado pelo teclado. Fica a vontade do usuário adicionar ao código as linhas necessárias para isso.
