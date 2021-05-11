@@ -8,7 +8,6 @@ void freeStyle(int tom[]);
 
 //Função para o modo aprendizado
 void musica();
-/* AHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 // Vetor com o valor das portas do arduino referentes as teclas de C(Dó) a B(Si)
 int keys[] = {14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 // Vetor com o valor das portas do arduino referentes aos leds de C(Dó) a B(Si)
@@ -82,8 +81,8 @@ void musica(){
   while(digitalRead(keys_musica[i])){   //loop que mantém a emissão de som de uma determinada tecla enquanto essa estiver pressionada
        tone(SPK, musicas[i]);           //inicio da reprodução do som da tecla
        digitalWrite(leds_musica[i], LOW); //desativação do sinal luminoso (led) da tecla a ser pressionada (nessa momento a tecla já foi/está pressionada)
-       delay(200);
-       lastState=HIGH;
+       delay(200);                      //delay de segurança
+       lastState=HIGH;                  //desativação do sinal luminoso (led), indicando que a tecla não está pressionada mais
   }
   if(lastState==HIGH){
        lastState=LOW;
