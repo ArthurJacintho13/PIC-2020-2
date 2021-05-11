@@ -78,29 +78,29 @@ void freeStyle(int tom[]){
   }
 }
 void musica(){
-  int lastState = LOW, i=0;
-  while(digitalRead(keys_musica[i])){
-       tone(SPK, musicas[i]);
-       digitalWrite(leds_musica[i], LOW);
-       delay(200); // debounce
+  int lastState = LOW, i=0;             //lastState: variável com o mesmo uso da função anterior. i: indice da tecla a ser pressionada (0 a n(n = numero total de teclas a serem pressionadas ao final da musica))
+  while(digitalRead(keys_musica[i])){   //loop que mantém a emissão de som de uma determinada tecla enquanto essa estiver pressionada
+       tone(SPK, musicas[i]);           //inicio da reprodução do som da tecla
+       digitalWrite(leds_musica[i], LOW); //desativação do sinal luminoso (led) da tecla a ser pressionada (nessa momento a tecla já foi/está pressionada)
+       delay(200);
        lastState=HIGH;
-     }
-     if(lastState==HIGH){
+  }
+  if(lastState==HIGH){
        lastState=LOW;
        noTone(SPK);
        digitalWrite(leds_musica[i+1], HIGH);
        i++;
-     }
-     if (i > (sizeof(ordem)/sizeof(int))-1){
+  }
+  if (i > (sizeof(ordem)/sizeof(int))-1){
        i = 0;
        noTone(SPK);
        delay(500);
        for(int p = 0; p < 12; p++){
-        digitalWrite(leds[p], HIGH);
-        delay(200);
-        digitalWrite(leds[p], LOW);
-        delay(100);
+          digitalWrite(leds[p], HIGH);
+          delay(200);
+          digitalWrite(leds[p], LOW);
+          delay(100);
        }
        digitalWrite(leds_musica[0], HIGH);
-     }
+  }
 }
