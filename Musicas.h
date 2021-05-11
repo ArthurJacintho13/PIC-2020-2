@@ -1,7 +1,7 @@
 #ifndef musicas_genericas
 #define musicas_genericas
 
-#include "notas.h"
+\\ #include "notas.h"
 #define SPK 11
 #define C 0
 #define C_S 1
