@@ -3,7 +3,7 @@
 #include "Musicas.h"
 
 //Função para o modo freestyle
-/* */
+/*tom[]: oitava desejada para o freestyle*/
 void freeStyle(int tom[]);
 
 //Função para o modo aprendizado
@@ -62,11 +62,11 @@ void loop() {
 }
 
 void freeStyle(int tom[]){
-   int lastState = LOW;
-   for(int i=0; i<12; i++){
-     while(digitalRead(keys[i])==HIGH){
-       tone(SPK, tom[i]);
-       digitalWrite(leds[i], HIGH);
+   int lastState = LOW;                 //variável que controla a duração da emissão do som da nota pressionada
+   for(int i=0; i<12; i++){             //loop que verifica incessantemente qual das doze teclas está sendo pressionada no momento
+     while(digitalRead(keys[i])==HIGH){ //loop que toca o som de uma nota enquanto a tecla em questão esteja pressionada
+       tone(SPK, tom[i]);               //inicio da reprodução do som da tecla
+       digitalWrite(leds[i], HIGH);     //ativação do sinal luminoso (led), indicando que a tecla está de fato pressionada
        delay(200); // debounce
        lastState=HIGH;
        
