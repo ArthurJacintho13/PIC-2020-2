@@ -3,6 +3,7 @@
 #include "Musicas.h"
 
 //Função para o modo freestyle
+/* */
 void freeStyle(int tom[]);
 
 //Função para o modo aprendizado
@@ -37,22 +38,27 @@ void setup() {
     leds_musica[i] = leds[ordem[i]];
   }
   
-  //SPK: macro que contem a porta do arduino referente ao speaker (definido na biblioteca)
+  //SPK: macro que contem a porta do arduino referente ao speaker (definido na biblioteca "musicas.h")
+  //Inicializando a porta do buzzer como output para reprodução sonora
   pinMode(SPK, OUTPUT);
   
+  //Inicializando as portas das teclas e dos leds
   for(int i = 0; i < 12; i++){
     pinMode(keys[i], INPUT);
     pinMode(leds[i], OUTPUT);
   }
   
+  //Ligando o led da primeira tecla a ser tocada (modo aprendizado)
   digitalWrite(leds_musica[0], HIGH);
   
 }
 
 void loop() {
   
+  //Chamada da função do modo aprendizado
    musica();
- // freeStyle(tones);
+  //Chamada da função do modo freestyle
+   //freeStyle(tones);
 }
 
 void freeStyle(int tom[]){
