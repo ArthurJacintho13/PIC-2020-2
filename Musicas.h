@@ -37,8 +37,8 @@ Ao final, basta descomentar os dois vetores relacionados a sua musica, comentar 
 */
   
 // Musica do re mi fa
-int ordem[] = {C, D, E, F_, F_, F_, C, D, C, D, D, D, C, G, F_, E, E, E, C, D, E, F_, F_, F_};
-int tom[] = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+//int ordem[] = {C, D, E, F_, F_, F_, C, D, C, D, D, D, C, G, F_, E, E, E, C, D, E, F_, F_, F_};
+//int tom[] = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
 
 // Musica UP 
 //int ordem[] = {D, F_S, D, C_S, D, F_S, C_S, B, B, D, B, A, A, F_S, E, B, F_S, E, D, B, D, E, D, C_S, C_S, E, C_S, A, A, D_S, A, G, G, B, A, F_S, A, G_S, G_S, G, B, D, C_S};
@@ -55,6 +55,10 @@ int tom[] = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
 //mARIO
 //int ordem[] = {E, E, E, C, E, G, G, C, G, E, A, B, A_S, A, G, E, G, A, F, G, E, C, D, B}
 //int tom[] =   {5, 5, 5, 5, 5, 5, 4, 5, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 4}
+
+//42 segundos de pantera cor de rosa
+int ordem[] = {D_S, E, F_S, G, D_S, E, F_S, G, C, B, E, G, B, A_S, A, G, E, D, E, D_S, E, F_S, G, D_S, E, F_S, G, C, B, G, B, E, D_S, D_S, E, F_S, G, D_S, E, F_S, G, C, B, E, G, B, A_S, A, G, E, D, E, E, D, B, A, G, E, A_S, A, A_S, A, A_S, A, A_S, A, G, E, D, E, E};
+int tom[] = {4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 4, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
 
 //Desperte o músico em vc e escreva uma nova música! :)
 //int ordem[] = {};
