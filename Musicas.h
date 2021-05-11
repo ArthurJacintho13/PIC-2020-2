@@ -26,7 +26,10 @@
 //int ordem[] = {A, A, B, A, D, C_S, A, A, B, A, E, D, A, A, A, F_S, D, C_S, B, G, G, F_S, D, E, D};
 //int tom[] =  {3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 3, 3, 4, 4, 4, 4, 3, 4, 4, 4, 4, 4, 4};
 //65 segundos de como é grande o meu amor por voce                                                                                          
-int ordem[] = {A, C, A, C, A, C, A, B, G, E, C, E, E, G, G, F_, D, F_, D, F_, D, D, F_, F_, E, D, E, C, B, B, A, C, A, A, C, A, B, G, A, E, E, E, G, G, F_, D, F_, D, F_, D, D, F_, F_, E, D, E, C, B, B, A, C, A, A, C, A, B, G, E, C};
-int tom[] ={3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 4, 3, 3, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 4, 3, 3, 4, 3, 3, 3, 4, 3};
+//int ordem[] = {A, C, A, C, A, C, A, B, G, E, C, E, E, G, G, F_, D, F_, D, F_, D, D, F_, F_, E, D, E, C, B, B, A, C, A, A, C, A, B, G, A, E, E, E, G, G, F_, D, F_, D, F_, D, D, F_, F_, E, D, E, C, B, B, A, C, A, A, C, A, B, G, E, C};
+//int tom[] ={3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 4, 3, 3, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 4, 3, 3, 4, 3, 3, 3, 4, 3};
+//
+int ordem[] = {};
+int tom[] = {};
 
 #endif
