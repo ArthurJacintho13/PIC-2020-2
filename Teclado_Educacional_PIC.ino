@@ -17,10 +17,10 @@ int leds[] = {38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49};
 int tones[][13] = {  {NOTE_C1, NOTE_CS1 , NOTE_D1, NOTE_DS1, NOTE_E1, NOTE_F1, NOTE_FS1, NOTE_G1, NOTE_GS1, NOTE_A1, NOTE_AS1, NOTE_B1}
                     ,{NOTE_C2, NOTE_CS2 , NOTE_D2, NOTE_DS2, NOTE_E2, NOTE_F2, NOTE_FS2, NOTE_G2, NOTE_GS2, NOTE_A2, NOTE_AS2, NOTE_B2}
                     ,{NOTE_C3, NOTE_CS3 , NOTE_D3, NOTE_DS3, NOTE_E3, NOTE_F3, NOTE_FS3, NOTE_G3, NOTE_GS3, NOTE_A3, NOTE_AS3, NOTE_B3}
-                    ,{NOTE_C4, NOTE_CS4 , NOTE_D4, NOTE_DS4, NOTE_E4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_GS4, NOTE_A4, NOTE_AS4, NOTE_B4}
+                    ,{NOTE_C4, NOTE_CS4 , NOTE_D4, NOTE_DS4, NOTE_E4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_GS4, NOTE_A4, NOTE_AS4, NOTE_B4} //Tom preferido
                     ,{NOTE_C5, NOTE_CS5 , NOTE_D5, NOTE_DS5, NOTE_E5, NOTE_F5, NOTE_FS5, NOTE_G5, NOTE_GS5, NOTE_A5, NOTE_AS5, NOTE_B5}
                     ,{NOTE_C6, NOTE_CS6 , NOTE_D6, NOTE_DS6, NOTE_E6, NOTE_F6, NOTE_FS6, NOTE_G6, NOTE_GS6, NOTE_A6, NOTE_AS6, NOTE_B6}
-                    ,{NOTE_C7, NOTE_CS7 , NOTE_D7, NOTE_DS7, NOTE_E7, NOTE_F7, NOTE_FS7, NOTE_G7, NOTE_GS7, NOTE_A7, NOTE_AS7, NOTE_B7}}; // melhor tom
+                    ,{NOTE_C7, NOTE_CS7 , NOTE_D7, NOTE_DS7, NOTE_E7, NOTE_F7, NOTE_FS7, NOTE_G7, NOTE_GS7, NOTE_A7, NOTE_AS7, NOTE_B7}};
 
 
 //Vetor com a sequência das teclas a serem tocadas no modo aprendizado
@@ -62,19 +62,18 @@ void loop() {
 }
 
 void freeStyle(int tom[]){
-   int lastState = LOW;                 //variável que controla a duração da emissão do som da nota pressionada
+   int lastState = LOW;                 //variável que controla a duração da emissão do som da nota pressionada e da luz do led. LOW: indica que nenhuma tecla foi pressionada ainda.
    for(int i=0; i<12; i++){             //loop que verifica incessantemente qual das doze teclas está sendo pressionada no momento
      while(digitalRead(keys[i])==HIGH){ //loop que toca o som de uma nota enquanto a tecla em questão esteja pressionada
        tone(SPK, tom[i]);               //inicio da reprodução do som da tecla
        digitalWrite(leds[i], HIGH);     //ativação do sinal luminoso (led), indicando que a tecla está de fato pressionada
-       delay(200); // debounce
-       lastState=HIGH;
-       
+       delay(200);                      //delay de segurança
+       lastState=HIGH;                  //HIGH: indica que alguma tecla (mais especificamente: a de indice i no vetor leds) foi pressionada.
      }
-     if(lastState==HIGH){
-       lastState=LOW;
-       noTone(SPK);
-       digitalWrite(leds[i], LOW);
+     if(lastState==HIGH){               //inicio de desativação do sinal luminoso (led) previamente acesso(nesse momento led está acesso)
+       lastState=LOW;                   //LOW:indica que nenhuma tecla foi/está sendo pressionada ainda.
+       noTone(SPK);                     //fim da reprodução do som da tecla
+       digitalWrite(leds[i], LOW);      //desativação do sinal luminoso (led), indicando que a tecla não está pressionada mais
     }
   }
 }
