@@ -1,6 +1,10 @@
 #ifndef biblioteca_tom
 #define biblioteca_tom
 
+/*
+  Essa biblioteca contem os valores a serem usados no arduino de todas as notas e seus respectivos tons
+*/
+
 #define NOTE_B0  31
 #define NOTE_C1  33
 #define NOTE_CS1 35
