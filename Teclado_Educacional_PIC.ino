@@ -82,24 +82,24 @@ void musica(){
        tone(SPK, musicas[i]);           //inicio da reprodução do som da tecla
        digitalWrite(leds_musica[i], LOW); //desativação do sinal luminoso (led) da tecla a ser pressionada (nessa momento a tecla já foi/está pressionada)
        delay(200);                      //delay de segurança
-       lastState=HIGH;                  //desativação do sinal luminoso (led), indicando que a tecla não está pressionada mais
+       lastState=HIGH;                  //HIGH: indica que alguma tecla (mais especificamente: a de indice i no vetor leds) foi pressionada.
   }
-  if(lastState==HIGH){
-       lastState=LOW;
-       noTone(SPK);
-       digitalWrite(leds_musica[i+1], HIGH);
-       i++;
+  if(lastState==HIGH){                  //inicio de desativação do sinal luminoso (led) previamente acesso(nesse momento led está acesso)
+       lastState=LOW;                   //LOW:indica que nenhuma tecla foi/está sendo pressionada ainda.
+       noTone(SPK);                     //fim da reprodução do som da tecla
+       digitalWrite(leds_musica[i+1], HIGH); //ativação do sinal luminoso (led) da proxima tecla a ser pressionada
+       i++;                             //incremento da tecla a ser pressionada
   }
-  if (i > (sizeof(ordem)/sizeof(int))-1){
-       i = 0;
-       noTone(SPK);
+  if (i > (sizeof(ordem)/sizeof(int))-1){ //condicional de controle para reiniciar o modo aprendizado da musica em questão
+       i = 0;                             //retornando ao indice da primeira tecla a ser pressionada
+       noTone(SPK);                       //fim da reprodução do som da tecla anterior
        delay(500);
-       for(int p = 0; p < 12; p++){
-          digitalWrite(leds[p], HIGH);
+       for(int p = 0; p < 12; p++){       //loop responsável pelo pequeno show de luzes ao finalizar a musica
+          digitalWrite(leds[p], HIGH);    //funcionamento: o loop acende e apaga em ordem crescente os leds presentes.
           delay(200);
           digitalWrite(leds[p], LOW);
           delay(100);
        }
-       digitalWrite(leds_musica[0], HIGH);
+       digitalWrite(leds_musica[0], HIGH); //Ligando o led da primeira tecla a ser tocada (modo aprendizado)
   }
 }
