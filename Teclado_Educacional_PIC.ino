@@ -2,12 +2,14 @@
 #include "notas.h"
 #include "Musicas.h"
 
+int i=0;
+
 //Função para o modo freestyle
 /*tom[]: oitava desejada para o freestyle*/
 void freeStyle(int tom[]);
-
 //Função para o modo aprendizado
 void musica();
+
 // Vetor com o valor das portas do arduino referentes as teclas de C(Dó) a B(Si)
 int keys[] = {14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 // Vetor com o valor das portas do arduino referentes aos leds de C(Dó) a B(Si)
