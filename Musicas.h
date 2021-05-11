@@ -37,8 +37,8 @@ Ao final, basta descomentar os dois vetores relacionados a sua musica, comentar 
 */
   
 // Musica do re mi fa
-//int ordem[] = {C, D, E, F_, F_, F_, C, D, C, D, D, D, C, G, F_, E, E, E, C, D, E, F_, F_, F_};
-//int tom[] = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+int ordem[] = {C, D, E, F_, F_, F_, C, D, C, D, D, D, C, G, F_, E, E, E, C, D, E, F_, F_, F_};
+int tom[] = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
 
 // Musica UP 
 //int ordem[] = {D, F_S, D, C_S, D, F_S, C_S, B, B, D, B, A, A, F_S, E, B, F_S, E, D, B, D, E, D, C_S, C_S, E, C_S, A, A, D_S, A, G, G, B, A, F_S, A, G_S, G_S, G, B, D, C_S};
