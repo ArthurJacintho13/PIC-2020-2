@@ -11,7 +11,7 @@ O projeto conta com dois modos: freestyle e aprendizado. O modo freestyle consis
 # ESQUEMÁTICO:
 https://imgur.com/see8qT8
 
-Obs: o esquemático passado pode ter seu visual melhorado e polido para que parece mais com um teclado real. Isso pode ser feito colocando as teclas dos sustenidos um pouco acima do nível das teclas das notas, assim como em um teclado real.
+Obs: o visual do esquemático ser melhorado, para que se assemelhe mais a um teclado real. Isso pode ser feito colocando as teclas dos sustenidos acima do nível das teclas das notas, como em um teclado real.
 
 # CODIGO
-O código na versão presente permite ainda a implementação de um dispositivo sonoro que melhore a qualidade do som gerado pelo teclado. Fica a vontade do usuário adicionar ao código as linhas necessárias para isso.
+O código na versão presente permite ainda a implementação de um dispositivo sonoro que melhore a qualidade do som gerado pelo teclado. Fica ao bom grado do usuário adicionar as linhas de codigo necessárias para isso.
