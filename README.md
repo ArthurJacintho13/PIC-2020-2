@@ -15,5 +15,5 @@ Obs: o visual do esquemático pode ser melhorado para que se assemelhe mais a um
 # CODIGO
 O código na versão presente permite ainda a implementação de um dispositivo sonoro que melhore a qualidade do som gerado pelo teclado. Fica ao bom grado do usuário adicionar as linhas de codigo necessárias para isso.
 
-#VIDEO DEMONSTRATIVO
+# VIDEO DEMONSTRATIVO
 https://youtu.be/l5gIYVnVHKg
