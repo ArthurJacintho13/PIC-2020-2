@@ -1,5 +1,6 @@
 # PIC-2020-2
 Trabalho final de Projeto Integrado de Computação - Engenharia de computação - Ufes
+Autores: Arthur Jacintho, Carlos Daniel Vieira, Daniel Sattler
 
 # RESUMO
 Construção de um teclado simples com 12 teclas, 7 notas e 5 acidentes (sustenidos), com o objetivo de familiarizar qualquer um com a dinâmica básica de um teclado real e de ensinar a tocar algumas músicas nesse instrumento.
