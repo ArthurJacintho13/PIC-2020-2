@@ -1,3 +1,10 @@
+/*
+
+Componentes do grupo: Arthur Barbosa Jacintho Silva, Carlos Daniel Albertino Vieira, Daniel Barcelos Sattler
+Projeto Integrado de Computacao - PIC
+
+*/
+
 // Biblioteca de tons
 #include "notas.h"
 #include "Musicas.h"
