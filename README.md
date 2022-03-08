@@ -1,4 +1,4 @@
-# PIC-2020-2
+# Teclado Didatico
 Trabalho final de Projeto Integrado de Computação - Engenharia de computação - Ufes
 Autores: Arthur Jacintho, Carlos Daniel Vieira, Daniel Sattler
 
